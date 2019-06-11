@@ -4,12 +4,40 @@
   <!-- ① A-Frame を読み込む -->
   <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
   <!-- ② AR.js を読み込む -->
-  <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
+  <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
 </head>
 
 <body style='margin: 0; overflow: hidden;'>
   <!-- ③ シーンを追加 -->
   <a-scene embedded arjs="debugUIEnabled:false;">
+
+    <!-- OBJ形式のCGモデルの読み込み -->
+    <!-- <a-assets>
+      <a-asset-item id="obj" src="asset/ramen.obj"></a-asset-item>
+      <a-asset-item id="mtl" src="asset/ramen.mtl"></a-asset-item>
+    </a-assets> -->
+
+    <!-- <a-assets>
+      <a-asset-item id="model" src="asset/5626774116319117477.vrm"></a-asset-item>
+    </a-assets> -->
+
+    <!-- ④-1 プリセットマーカーを追加  -->
+    <!-- <a-marker preset="hiro"> -->
+
+      <!-- ⑤ ボールオブジェクトを追加 -->
+      <!-- <a-sphere scale=".25 .25 .25" position="0 .5 0" color="#111">
+        <a-animation attribute="position" to="0 1 0" direction="alternate" dur="2000" repeat="indefinite"></a-animation>
+      </a-sphere> -->
+      
+      <!-- マーカーの場所に箱を追加（見やすいようにワイヤーフレーム表示） -->
+      <!-- <a-box position="0 0.5 0" wireframe="true"></a-box> -->
+
+      <!-- マーカーの場所に OBJ 形式の 3DCG を追加 -->
+      <!-- <a-obj-model src="#obj" mtl="#mtl" scale="0.5 0.5 0.5" position="0 0.5 0">
+        <a-animation attribute="rotation" to="0 360 0" dur="3000" easing="linear" repeat="indefinite"></a-animation>
+      </a-obj-model> -->
+
+    <!-- </a-marker> -->
     
     <!-- ④-2 オリジナルマーカーを追加  -->
     <a-marker type='pattern' url='./asset/pattern-qr-code.patt'>
