@@ -15,9 +15,10 @@
 
     <!-- 3DCGモデルの読み込み -->
     <a-assets>
-      <a-asset-item id="obj" src="asset/ramen.obj"></a-asset-item>
-      <a-asset-item id="mtl" src="asset/ramen.mtl"></a-asset-item>
+      <!-- <a-asset-item id="obj" src="asset/ramen.obj"></a-asset-item>
+      <a-asset-item id="mtl" src="asset/ramen.mtl"></a-asset-item> -->
       <a-asset-item id="vroid" src="asset/vroid.glb"></a-asset-item>
+      <img id="image" src="asset/image.png">
     </a-assets>
 
     <!-- ④-1 プリセットマーカーを追加  -->
@@ -32,9 +33,12 @@
       <!-- <a-box position="0 0.5 0" wireframe="true"></a-box> -->
 
       <!-- ⑤-3 マーカーの場所に OBJ 形式の 3DCG を追加 -->
-      <a-obj-model src="#obj" mtl="#mtl" scale="0.5 0.5 0.5" position="0 0.5 0">
+      <!-- <a-obj-model src="#obj" mtl="#mtl" scale="0.5 0.5 0.5" position="0 0.5 0">
         <a-animation attribute="rotation" to="0 360 0" dur="3000" easing="linear" repeat="indefinite"></a-animation>
-      </a-obj-model>
+      </a-obj-model> -->
+
+      <!-- ⑤-4 マーカーの場所に PNG 形式の 画像 を追加 -->
+      <a-image src="#image"></a-image>
 
     </a-marker>
 
